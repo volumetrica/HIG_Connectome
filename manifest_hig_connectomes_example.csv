@@ -1,0 +1,3 @@
+filename,subject,label,family
+sub-001_corr.csv,sub-001,condition_A,fam001
+sub-002_corr.csv,sub-002,condition_B,fam002
