@@ -1,0 +1,41 @@
+% Standalone research note; does not modify article-v1.
+\section{Atlas-constrained HIG and geometric correlation scales}
+Let $C\in[-1,1]^{n\times n}$ denote a symmetric functional-connectivity
+matrix with a fixed ROI order and $N\in\{0,1\}^{n\times n}$ its
+anatomical parcel-contact adjacency in the same order.
+For off-diagonal graph distance $d_N(i,j)$ define
+\[
+ K_k(i,j)=\mathbf{1}\{d_N(i,j)=k\},\qquad
+ K_{\le k}(i,j)=\mathbf{1}\{i\ne j,\ d_N(i,j)\le k\}.
+\]
+The geometrically constrained functional matrices are
+\[
+ C_k^g=K_k\odot C,\qquad
+ C_{\le k}^g=K_{\le k}\odot C,\qquad
+ E_k=\sum_{\substack{i<j\\d_N(i,j)=k}} C_{ij}^2.
+\]
+The masks $K_k$ are disjoint on off-diagonal pairs and
+$\sum_k E_k=\sum_{i<j,d_N(i,j)<\infty}C_{ij}^2$.
+The nonnegative integer $(N^k)_{ij}$ counts walks, whereas
+$K_k$ records \emph{shortest-path distance}. These are
+different scales.
+
+If $UNV=D$ is a Smith normal form over $\mathbb Z$, then
+$G_{\mathbb Q}=V D_{\mathbb Q}^+ U$ satisfies
+$NG_{\mathbb Q}N=N$ and $G_{\mathbb Q}NG_{\mathbb Q}=G_{\mathbb Q}$,
+but is in general rational and is not necessarily Moore--Penrose.
+An integral $G$ with $NGN=N$ exists precisely when all
+nonzero invariant factors of $N$ are units. In particular, the
+Smith form of a real-valued $C_k^g$ cannot be computed over
+$\mathbb Z$ without a specified integer quantization.
+Proposed $s^2$-model scale maps need independent verification of
+their retained axioms.
+
+The HIG of an ROI-indexed correlation image captures incidences
+of its \emph{chosen matrix layout}; its image homology must not be
+identified with the homology of the anatomical graph or abstract
+functional network. An anatomical constraint on matrix entries
+does not remove this representation distinction.
+
+This is a proposed extension, not a newly validated experimental
+or clinical claim. See the associated protocol document.
